@@ -1,0 +1,46 @@
+body{
+  background: #e84118;
+}
+
+.container{
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.Dice{
+  width: 300px;
+  text-align: center;
+  display: inline-block;
+  padding: 0 0 30px 20px;
+}
+
+.heading {
+  color: #353b48;
+  font-size: 3.6rem;
+  margin-bottom: 3rem;
+}
+
+.container p{
+  color: #ecf0f1;
+  font-size: 1.6rem;
+}
+
+.bttn{
+  text-align: center;
+  padding-left: 15px;
+}
+
+.dice2{
+  margin-left: 20px;
+  padding-bottom: 1.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .Dice {
+    width: 200px;
+  }
+  .dice2{
+    margin-left: 0;
+  }
+}

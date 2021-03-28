@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Style.css" title="" type="" />
+    <title>Dice Game</title>
+  </head>
+  <body>
+   
+
+    <div class="container">
+     <h1 class="heading">DICE GAME</h1>
+     
+     <div class="Dice">
+       <p>Player 1</p>
+       <img src="./delapouite/dice1.svg" id="check1" />
+     </div>
+     
+     <div class="Dice dice2">
+       <p>Player 2</p>
+       <img src="./delapouite/dice6.svg" id="check2" />
+     </div>
+    </div>
+    
+    <div class="bttn">
+      
+  <button class="btn btn-success" onclick="ludogame()" type="submit">Click here</button>
+  
+  </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script href="./Main.js">
+    
+ludogame = () => {
+  const player1 = Math.floor(Math.random() * 6) + 1;
+  const playdice = `./delapouite/dice${player1}.svg`;
+  document.getElementById("check1").setAttribute("src", playdice);
+
+ const player2 = Math.floor(Math.random() * 6) + 1;
+  const playdice2 = `./delapouite/dice${player2}.svg`;
+  document.getElementById("check2").setAttribute("src", playdice2);
+
+  if (player1 > player2) {
+    document.querySelector("h1").innerHTML= "Player 1 Won :)";
+  }else if(player1 < player2){
+  document.querySelector("h1").innerHTML= "Player 2 Won :)";
+}else {
+document.querySelector("h1").innerHTML= "Draw";
+}
+}
+    
+    
+    </script>
+  </body>
+</html>
